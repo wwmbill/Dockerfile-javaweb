@@ -32,7 +32,7 @@ ENV JAVA_HOME /usr/java/latest
 
 #install tomcat
 ENV TOMCAT_VERSION 7.0.62
-RUN wget http://mirrors.cnnic.cn/apache/tomcat/tomcat-7/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.zip -O /tmp/tomcat.zip
+RUN wget http://archive.apache.org/dist/tomcat/tomcat-7/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.zip -O /tmp/tomcat.zip
 RUN unzip /tmp/tomcat.zip -d /tmp/
 RUN rm -rf /tmp/tomcat.zip
 RUN mkdir -p /data
