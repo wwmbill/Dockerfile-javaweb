@@ -62,6 +62,7 @@ ADD conf/supervisor/supervisord.conf /etc/supervisord.conf
 ADD conf/supervisor/supervisord_tomcat.sh /data/tomcat/bin/supervisord_tomcat.sh
 RUN chmod +x /data/tomcat/bin/supervisord_tomcat.sh
 
+ADD ./javaweb01.war  /data/tomcat/webapps
 EXPOSE 80 
 
 CMD ["supervisord", "-n"] 
